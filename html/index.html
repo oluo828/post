@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网上办事大厅-校园通行卡</title>
+
+
+</head>
+
+<body>
+    <div class="totle" style="margin: 0;border: 0;">
+        <img src="../img/background.png" style="width:auto;position:absolute;z-index: 0;">
+
+        <img src="../img/rotate1.png" style="width:auto;position:absolute;z-index: 10;">
+
+        <div class="dateTime" style="position:absolute;z-index: 10;font-size: 3.125rem;color:#349f57 ;">
+            <script>
+                function showTime() {
+                    var date = new Date();
+                    var y = date.getFullYear();
+                    var m = date.getMonth() + 1;
+                    var d = date.getDate();
+                    var h = date.getHours();
+                    var mi = date.getMinutes();
+                    if (mi < 10) mi = '0' + mi;
+                    var s = date.getSeconds();
+                    if (s < 10) s = '0' + s;
+                    document.querySelector(".dateTime").innerHTML = y + "年" + m + "月" + d + "日 " + h + ":" + mi + ":" + s;
+                }
+                showTime();
+                setInterval(showTime, 1000);
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
